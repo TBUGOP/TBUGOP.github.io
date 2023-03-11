@@ -87,3 +87,23 @@ body {
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .navMenu {
+    top: 10%;
+  }
+
+  #navMenu2 {
+    margin-left: 20%;
+  }
+
+  .navMenu a {
+    width: 60px;
+    font-size: 1em;
+  }
+
+  .navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
