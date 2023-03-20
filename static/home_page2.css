@@ -15,15 +15,16 @@ body {
   position: absolute;
   top: 5%;
   left: 50%;
+  margin-left: -3%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 #navMenu2 {
-  position: absolute;
+  /* position: absolute; */
   top: 5%;
   left: 50%;
-  margin-left: 42%;
+  margin-left: 3%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
