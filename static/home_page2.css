@@ -91,12 +91,14 @@ body {
 
 @media (max-width: 768px) {
   .navMenu {
+    position: relative;
+    margin-top: 5%;
     top: 10%;
   }
 
   #navMenu2 {
-    margin-left: 20%;
-  }
+    margin-left: 37%;
+}
 
   .navMenu a {
     width: 60px;
