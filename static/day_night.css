@@ -311,7 +311,7 @@
 	position: absolute;
 	width: 100vw;
 	height:100vh;
-	// display:none;
+	/* display:none; */
 }
 
 .comet-instance {
@@ -336,7 +336,7 @@
 	transform: scale(0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media screen {
 	.comet-instance {
 		animation: MakeItRain 10s infinite;
 	}
@@ -371,22 +371,27 @@
 		animation-delay: 14s;
 	}
 
+	/* Animation keyframes */
 	@keyframes MakeItRain {
+		/* Starting position */
 		0% {
 			opacity: 0;
-			transform: scale(0) translate(0, 0);
+			transform: scale(0) translateX(0) translateY(0);
 		}
+		/* 70% of animation */
 		70% {
 			opacity: 0.4;
-			transform: scale(0.4) translate(0, 0);
+			transform: scale(0.4) translateX(0) translateY(0);
 		}
+		/* End position */
 		100% {
 			opacity: 1;
-			transform: scale(1) translate(-101vw, 101vh);
+			transform: scale(1) translateX(-101vw) translateY(101vh);
+			/* Fallback for browsers that do not support keyframes */
+			/* transform: translateX(-101vw) translateY(101vh); */
 		}
 	}
 }
-
 
 
 /* Layout */
@@ -461,3 +466,33 @@ h1,h2{
 a {
 	text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+	body {
+	padding: 0 2em;
+	}
+	h1 {
+		margin-left: -12%;
+	}
+	h2 {
+		display: none;
+	}
+	#Resume {
+		display: flex;
+	}
+	.container {
+	flex-basis: 100%;
+	}
+	#container_footer {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 5%;
+	justify-content: center;
+	margin-right: 5%;
+	margin-bottom: 30px;
+	}
+	.icons {
+		margin: 10px;
+		height: 30px;
+		}
+		}
